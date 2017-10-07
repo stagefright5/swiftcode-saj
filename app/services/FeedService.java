@@ -19,10 +19,18 @@ public class FeedService {
                     .setQueryParameter("q",keyword)
                     .setQueryParameter("output","rss")
                     .get();
+            Document feedResponse = responsePromise.thenApply(WSResponse::asXml).toCompletableFuture().get();
+            Node item = feedResponse.getFirstChild().getFirstChild().getChildNodes().item(9);
+            feedResponseObject.title = item.getChildNodes().item(0).getFirstChild().getNodeValue();
+            feedResponseObject.pubDate = item.getChildNodes().item(3).getFirstChild().getNodeValue();
+            feedResponseObject.description = item.getChildNodes().item(4).getFirstChild().getNodeValue();
 
         }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return  feedResponseObject;
 
-        //return null;
     }
 
 }
