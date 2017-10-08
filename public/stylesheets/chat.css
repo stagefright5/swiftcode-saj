@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Lato:100i');
+
 
 #message-pane{
-background: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg);
+background: url(http://desktopwalls.net/wp-content/uploads/2014/12/Hipster%20Items%20Minimal%20Flat%20Illustration%20Desktop%20Wallpaper.jpg);
 background-repeat: no-repeat;
-background-size: auto;
+background-size: 100% 90%;
 background-position: center;
+
 }
 
 .message-card{
@@ -11,10 +14,18 @@ background-position: center;
     border-radius: 3px;
     padding: 10px;
     font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
     }
 
 .message-time{
     margin-top: 4px;
     color: #000000;
     font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+
+    }
+
+.form-card{
+    margin: 0px;
     }
