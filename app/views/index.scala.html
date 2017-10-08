@@ -26,16 +26,19 @@
             </div>
 
         </md-content>
-        <md-card class="form-card" flex="10" layout="row">
+        <md-card class="form-card" flex="10" layout="row" layout-align="center center">
             <form flex="90" layout="row" ng-submit="sendMessage()">
                 <md-input-container flex>
                     <label>message</label>
                     <input ng-model="userMessage">
                 </md-input-container>
             </form>
-            <md-button class="md-icon-button" ng-click="sendMessage()">
-                <md-icon md-svg-icon="/assets/images/ic_send_black_48px.svg"></md-icon>
+            <div flex="10">
+            <md-button class="md-fab md-icon-button" ng-click="sendMessage()">
+                <md-icon md-svg-icon="/assets/images/ic_send_black_48px.svg"
+                         layout-align="center center"></md-icon>
             </md-button>
+            </div>
         </md-card>
     </md-card>
 
@@ -46,6 +49,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     <script src="/assets/javascripts/chat.js"></script>
+
 </body>
 
 </html>
