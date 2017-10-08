@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Lato:100i');
 
-
 #message-pane{
-background: url(https://lh3.googleusercontent.com/LkRu3gM6q2oGSqiClfEZmCf1hadnIaDCyD94F-DUp4Srf2I-zmvIS3kRaG1uf_2iLw=h1264);
-background-repeat: no-repeat;
-background-size: 100% 100%;
-background-position: center;
-
+ background-color:#91baba ;
 }
 
 .message-card{

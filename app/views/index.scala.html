@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="/assets/stylesheets/chat.css">
 </head>
 
-<body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">
+<body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch" >
 
-    <md-card flex="none" layout="column" style="max-width: 100%; width:800px">
+    <md-card flex="none" layout="column" style="max-width: 100%; width:800px" >
         <md-content id="message-pane" flex="90">
             <div ng-repeat="message in messages" layout="column" layout-align="{{message.sender=='BOT'?'start start':'start end'}}">
                 <md-card class="message-card"
-                         ng-style="message.sender=='BOT'?{'background-color':'#d1a687', 'font-weight':'bolder'}:{'background-color':'#e0cfc3'}"
+                         ng-style="message.sender=='BOT'?{'background-color':'#adedaf', 'font-weight':'bolder'}:{'background-color':'#e0cfc3'}"
 
-                         layout-align="right end">
+                         layout-align="start start">
               <span>{{message.text}}</span>
               <span ng-bind-html="trust(message.feedResponse.description)">
                   {{message.feedResponse.description}}
               </span>
-                <span class="message-time" layout-align="end end">{{message.time}}</span>
+                <span class="message-time" layout-align="start end">{{message.time}}</span>
                 </md-card>
             </div>
 
